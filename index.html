@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do App</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+<body>
+    <div>
+        <header>
+            <div id="header-left-side">
+                <img id="menu-icon" src="assets/menu_icon.png">
+                <div id="quick-find-container">
+                    <img id="search-icon" src="assets/search_icon.png">
+                    <input id="quick-find" type="text" placeholder="Quick Find" oninput="filterTasks()">
+                </div>
+            </div>
+            <div id="header-right-side">
+                <img id="check-icon" src="assets/check_icon.png">
+                <p id="task-count">30/5</p>
+            </div>
+        </header>
+
+        <nav id="toggle_list">
+            <ul>
+                <li>
+                    <img src="assets/inbox_icon.png">
+                    <span class="text">Inbox <span class="count">5</span></span>
+                </li>
+                <li>
+                    <img src="assets/calendar_icon.png">
+                    <span class="text">Today <span class="cal_count">5</span></span>
+                </li>
+                <li>
+                    <img src="assets/upcoming_icon.png">
+                    <span class="text">Upcoming</span>
+                </li>
+            </ul>
+        </nav>
+
+        <main id="main-nav">
+            <h1>Inbox</h1>
+            <ul id="task-list">
+                <!-- Tasks dynamically added here -->
+            </ul>
+
+            <div id="add-task-container">
+                <div id="addTaskWrapper" style="cursor: pointer;">
+                    <img src="assets/add_task_icon.png" id="addTaskIcon">
+                    <span id="add-task-text" style="color: #7e7d79;">Add Task</span>
+                </div>
+                <div id="add-task-container2" style="display: none;">
+                    <div id="input-container">
+                        <input id="new-task-input" type="text" placeholder="Task name">
+                        <div class="input-line"></div>
+                    </div>
+                    <div id="button-container">
+                        <button id="cancel-task-button">Cancel</button>
+                        <button id="add-task-button">Add task</button>
+                    </div>
+                </div>
+                
+            </div>
+        </main>
+    </div>
+</body>
+</html>
